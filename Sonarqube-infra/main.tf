@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_vpc" "vpc"{
   cidr_block = var.vpc_cidr_block
   tags = {
-    Name = "msit-prod-vpc-sonar"
+    Name = "prod-vpc-sonar"
   }
 }
 # creation of Subnet
@@ -18,14 +18,14 @@ resource "aws_subnet" "subnet" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "Msit-prod-subnet-sonar"
+    Name = "prod-subnet-sonar"
   }
 }
 # creation of internet gate way
 resource "aws_internet_gateway" "gateway" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "msit-gateway"
+    Name = "gateway"
   }
 }
 # creation of the route table and route table associations
@@ -36,7 +36,7 @@ resource "aws_route_table" "route_table" {
     gateway_id = aws_internet_gateway.gateway.id
   }
   tags = {
-    Name = "msit-routetable-sonar"
+    Name = "routetable-sonar"
   }
 }
 resource "aws_route_table_association" "my_association" {
@@ -97,7 +97,7 @@ resource "aws_instance" "sonar" {
   user_data       = file("sonar-install.sh") # (we are create a file for install and updated the file here)
   associate_public_ip_address = var.associate_public_ip_address
   tags = {
-    Name = "msit-sonar"
+    Name = "sonar"
   }
 }
 output "sonar_endpoint" {
