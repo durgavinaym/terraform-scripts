@@ -11,7 +11,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
 
   tags = {
-    Name        = "Msit-prod-vpc"    
+    Name        = "prod-vpc"    
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_subnet" "public-subnet" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name        = "Msit-prod-public-subnet"
+    Name        = "prod-public-subnet"
   }
 }
 
@@ -35,7 +35,7 @@ resource "aws_subnet" "private-subnet" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name        = "Msit-prod-private-subnet"
+    Name        = "prod-private-subnet"
   }
 }
 
@@ -43,7 +43,7 @@ resource "aws_subnet" "private-subnet" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name        = "Msit-prod-public-igw"
+    Name        = "prod-public-igw"
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_route_table" "private" {
     gateway_id = aws_internet_gateway.igw.id  
   }
   tags = {
-    Name        = "Msit-prod-private-routetable"
+    Name        = "prod-private-routetable"
   }
 }
 
@@ -67,7 +67,7 @@ resource "aws_route_table" "public" {
   gateway_id = aws_internet_gateway.igw.id  
   }
   tags = {
-    Name        = "Msit-prod-public-routetable"
+    Name        = "prod-public-routetable"
   }
 }
 
