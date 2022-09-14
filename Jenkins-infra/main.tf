@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_vpc" "vpc"{
   cidr_block = var.vpc_cidr_block
   tags = {
-    Name = "msit-prod-vpc"
+    Name = "prod-vpc"
   }
 }
 # creation of the Subnet
@@ -16,13 +16,13 @@ resource "aws_subnet" "subnet" {
   vpc_id     = aws_vpc.vpc.id
    
   tags = {
-    Name = "msit-prod-subnet"
+    Name = "prod-subnet"
   }
 }
 #resource "aws_eip" "eip" {
  # vpc = true
   #tags = {
-   # Name = "Msit-eip"
+   # Name = "eip"
  # }
 #}
 
@@ -30,7 +30,7 @@ resource "aws_subnet" "subnet" {
 resource "aws_internet_gateway" "gateway" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "msit-gateway"
+    Name = "gateway"
   }
 }
 # creation of the route table and route associations
@@ -93,7 +93,7 @@ resource "aws_security_group" "jenkins_sg" {
   associate_public_ip_address = var.associate_public_ip_address
 
   tags = {
-    Name = "msit-Jenkins"
+    Name = "Jenkins"
   }
  }
  output "jenkins_endpoint" {
