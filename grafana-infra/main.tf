@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_vpc" "vpc"{
   cidr_block = var.vpc_cidr_block
   tags = {
-    Name = "msit-prod-vpc-grafana"
+    Name = "prod-vpc-grafana"
   }
 }
 # creation of the subnet 
@@ -18,14 +18,14 @@ resource "aws_subnet" "subnet" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "Msit-prod-subnet-grafana"
+    Name = "prod-subnet-grafana"
   }
 }
 # crewation of the internet gateway
 resource "aws_internet_gateway" "gateway" {
   vpc_id = aws_vpc.vpc.id
   tags = {
-    Name = "msit-gateway"
+    Name = "gateway"
   }
 }
 # creation of the routetable and routetable association
@@ -36,7 +36,7 @@ resource "aws_route_table" "route_table" {
     gateway_id = aws_internet_gateway.gateway.id
   }
   tags = {
-    Name = "msit-routetable-grafana"
+    Name = "routetable-grafana"
   }
 }
 resource "aws_route_table_association" "my_association" {
@@ -104,7 +104,7 @@ resource "aws_instance" "grafana" {
   user_data       = file("grafana-install.sh") #(we are create a file for install and updated the file here)
   associate_public_ip_address = var.associate_public_ip_address
   tags = {
-    Name = "msit-grafana"
+    Name = "grafana"
   }
 }
 output "grafana_endpoint" {
