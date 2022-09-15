@@ -14,7 +14,7 @@
  #Installation of Terraform on windows
  check the below link for the installtion of terraform
  https://spacelift.io/blog/how-to-install-terraform
- https://youtu.be/Cn6xYf0QJME
+ https://youtu.be/Cn6xYf0QJME ;
  https://youtu.be/cCaTsD8pRrY 
  
   #Main Commands of terraform 
