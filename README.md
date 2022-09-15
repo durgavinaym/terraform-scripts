@@ -14,6 +14,8 @@
  #Installation of Terraform on windows
  check the below link for the installtion of terraform
  https://spacelift.io/blog/how-to-install-terraform
+ https://youtu.be/Cn6xYf0QJME
+ https://youtu.be/cCaTsD8pRrY 
  
   #Main Commands of terraform 
   init          Prepare your working directory for other commands
@@ -32,6 +34,7 @@
  Create a Elastic kubernetes cluster.
  
  Below are some refference links
+ https://adamtheautomator.com/terraform-vpc/
  https://www.ashnik.com/install-jenkins-on-aws-ec2-instance-using-terraform/
  https://medium.com/@haissamhammoudfawaz/create-a-aws-lambda-function-using-terraform-and-python-4e0c2816753a
  https://www.sensedia.com/post/how-create-cluster-kubernetes-terraform-aws-eks
