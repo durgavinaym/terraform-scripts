@@ -38,3 +38,12 @@
  https://www.ashnik.com/install-jenkins-on-aws-ec2-instance-using-terraform/
  https://medium.com/@haissamhammoudfawaz/create-a-aws-lambda-function-using-terraform-and-python-4e0c2816753a
  https://www.sensedia.com/post/how-create-cluster-kubernetes-terraform-aws-eks
+
+Jenkins-infra 
+resources : msit-vpc,msit-subnet,routetables,security group,Ec2 instances
+for jenkinsinstall: jenkins-install.sh
+
+sonar-infra
+resources : msit-vpc,msit-subnet,routetables,security group,Ec2 instances
+for jenkinsinstall: sonar-install.sh
+
