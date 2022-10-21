@@ -105,7 +105,7 @@
    |terraform_logging_arn_output | output |
    
     |Create of  EKS cluster |
-  | :---:     |
+    | :---:     |
   
   | file1 | file2 | 
   | :---:  | :---: |
