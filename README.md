@@ -33,6 +33,101 @@
  Create a sample Lambda function.
  Create a Elastic kubernetes cluster.
  
+ |Create of  Jenkin application |
+  | :---:     |
+  
+  | file1 | file2 | file3 |
+  | :---:  | :---: | :---: |
+  |main.tf | var.tf| jenkins-install.sh  | 
+  
+   | Resources  | Type     |
+   | :---:      | :---:    |
+   |  aws_vpc  | resource |
+   | aws_subnet | resource |
+   | aws_internet_gateway | resource | 
+   | aws_route_table | resource |
+   | aws_route | resource |
+   | aws_route_table_association | resource |
+   |aws_instance | resource |
+   |jenkins_endpoint |    |
+   
+   |Create of  Sonarqube application |
+  | :---:     |
+  
+  | file1 | file2 | file3 |
+  | :---:  | :---: | :---: |
+  |main.tf | var.tf| sonar-install.sh  | 
+  
+   | Resources  | Type     |
+   | :---:      | :---:    |
+   |  aws_vpc  | resource |
+   | aws_subnet | resource |
+   | aws_internet_gateway | resource | 
+   | aws_route_table | resource |
+   | aws_route | resource |
+   | aws_route_table_association | resource |
+   |aws_instance | resource |
+   |sonar_endpoint |    |
+   
+   |Create of  grafana application |
+  | :---:     |
+  
+  | file1 | file2 | file3 |
+  | :---:  | :---: | :---: |
+  |main.tf | var.tf| grafana-install.sh  | 
+  
+   | Resources  | Type     |
+   | :---:      | :---:    |
+   |  aws_vpc  | resource |
+   | aws_subnet | resource |
+   | aws_internet_gateway | resource | 
+   | aws_route_table | resource |
+   | aws_route | resource |
+   | aws_route_table_association | resource |
+   |aws_instance | resource |
+   |grafana_endpoint |    |
+   
+   |Create of  sample awslambda function |
+  | :---:     |
+  
+  | file1 | file2 | 
+  | :---:  | :---: |
+  |main.tf | python|  
+  
+   | Resources  | Type     |
+   | :---:      | :---:    |
+   |  aws_iam_role | resource |
+   |aws_iam_policy | resource |
+   | aws_iam_role_policy_attachment | resource | 
+   | aws_lambda_function | resource |
+   | terraform_aws_role_output | output  |
+   | terraform_aws_role_arn_output | output  |
+   |terraform_logging_arn_output | output |
+   
+    |Create of  EKS cluster |
+  | :---:     |
+  
+  | file1 | file2 | 
+  | :---:  | :---: |
+  |main.tf | var.tf|  
+  
+   | Resources  | Type     |
+   | :---:      | :---:    |
+   |  aws_iam_role | resource |
+   |aws_iam_role_policy_attachment- container registry | resource |
+   | aws_iam_role_policy_attachment -eks | resource | 
+   | aws_eks_cluster | resource |
+   |  aws_iam_role - node | resource |
+   |aws_iam_role_policy_attachment- node container registry | resource |
+   | aws_iam_role_policy_attachment - EKS_CNI_Policy | resource | 
+   | aws_iam_role_policy_attachment - node ECR | resource | 
+   | aws_iam_role_policy_attachment - node eks | resource | 
+   | aws_eks_node_group | resource |
+   
+   
+   
+   
+   
  Below are some refference links
  https://adamtheautomator.com/terraform-vpc/
  https://www.ashnik.com/install-jenkins-on-aws-ec2-instance-using-terraform/
