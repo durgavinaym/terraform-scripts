@@ -18,11 +18,12 @@
  https://youtu.be/cCaTsD8pRrY 
  
   #Main Commands of terraform 
-  init          Prepare your working directory for other commands
-  validate      Check whether the configuration is valid
-  plan          Show changes required by the current configuration
-  apply         Create or update infrastructure
-  destroy       Destroy previously-created infrastructure
+   | init      |    Prepare your working directory for other commands|
+   | :---:     | :---:    |
+   | validate    |  Check whether the configuration is valid |
+   |plan      |    Show changes required by the current configuration|
+   | apply       |  Create or update infrastructure|
+   | destroy     |  Destroy previously-created infrastructure|
  
  In the about scripts iam using Aws cloud provider
  firstly create an Iam user in aws >> give the user the * Programmatic access *Console Access >> attach the administator Access 
@@ -124,6 +125,16 @@
    | aws_iam_role_policy_attachment - node eks | resource | 
    | aws_eks_node_group | resource |
    
+   
+    By using terraform commands create the infra of the applications
+   Intilize the terraform for the creation of the infra 
+   *  terraform init
+   After intilization plan the structure of terraform script
+   * terraform plan
+   After plan apply the terraform script resources on the required service
+   * terraform apply
+   After the creation of the resources want to delete 
+   * terraform destroy
    
    
    
