@@ -106,7 +106,7 @@
    |terraform_logging_arn_output | output |
    
     |Create of  EKS cluster |
-    | :---:     |
+    | :---:     | :---: |
   
   | file1 | file2 | 
   | :---:  | :---: |
@@ -128,13 +128,13 @@
    
     By using terraform commands create the infra of the applications
    * Intilize the terraform for the creation of the infra 
-     terraform init
+              terraform init
    * After intilization plan the structure of terraform script
-    terraform plan
+               terraform plan
    *  After plan apply the terraform script resources on the required service
-    terraform apply
+                  terraform apply
    * After the creation of the resources want to delete 
-    terraform destroy
+                   terraform destroy
    
    
    
