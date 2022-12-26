@@ -36,7 +36,6 @@ resource "aws_route_table" "my_route_table" {
   }
 }
 resource "aws_security_group" "my_security" {
-  name = new_security
   vpc_id = aws_vpc.myvpc.id
   ingress {
     from_port = 0
@@ -49,6 +48,9 @@ resource "aws_security_group" "my_security" {
     protocol  = "-1"
     to_port   = 0
     cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "new_security"
   }
 }
 resource "aws_route_table_association" "my_association" {
